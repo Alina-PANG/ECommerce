@@ -54,11 +54,14 @@
 table {
   width:100%;
 }
-table#create-new-product th{
+table.create-new-form th{
   text-align: left;
   width: 30%;
 }
-table#create-new-product #create-btn{
+table .submit-btn{
   margin: auto;
   display: block;
+}
+.header div{
+  text-align: right;
 }

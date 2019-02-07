@@ -1,7 +1,6 @@
 
 
 function tableGenerateViewAllProducts() {
-  console.log('being run');
   var table = document.getElementById('product-table');
   for (var i = 0; i < 9; i ++) {
     var tr = document.createElement('tr');
