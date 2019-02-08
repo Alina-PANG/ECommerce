@@ -9,7 +9,7 @@
   <body>
     <div class="body">
       <div class="header">
-        <h1>Point of Sale System (v5.0) :: Create New Staff</h1>
+        <h1 id="POS-title">Point of Sale System (v5.0) :: Create New Staff</h1>
         <div>
           <form>
             <label for="username">Username</label>
@@ -54,8 +54,8 @@
           </section>
         </div>
         <div class="center">
-          <h3>Create New Staff</h3>
-          <table class="create-new-form">
+          <h3 id="POS-title-h3">Create New Staff</h3>
+          <table class="create-new-form" id="create-staff-form">
             <tr>
               <th>Staff ID</th>
               <td><input type="text" placeholder="1"></td>
@@ -85,7 +85,7 @@
               <th>Password</th>
               <td><input type="password"></td>
             </tr>
-            <tr><td colspan="2"><input type="button" value="Create" class="submit-btn"></td></tr>
+            <tr><td colspan="2"><input type="button" id="create-staff-btn" value="Create" class="submit-btn"></td></tr>
           </table>
         </div>
         <div class="right">
@@ -101,5 +101,6 @@
       <div class="footer"><h6>@2019 IS3106. All rights reserved.</h6></div>
     </div>
   </body>
-  <script src="../js/data-generator.js" charset="utf-8"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  .<script type="text/javascript" src="../js/update-staff.js" charset="utf-8"></script>
 </html>

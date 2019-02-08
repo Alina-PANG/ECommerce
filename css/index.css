@@ -54,7 +54,7 @@
 table {
   width:100%;
 }
-table.create-new-form th{
+table.create-new-form th, table.view-detail th{
   text-align: left;
   width: 30%;
 }

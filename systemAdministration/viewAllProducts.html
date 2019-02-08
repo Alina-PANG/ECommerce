@@ -55,6 +55,13 @@
         </div>
         <div class="center">
           <h3>Product Catalogue</h3>
+          <div class="search-menu">
+            <input type="text" id="search-bar" onkeyup="search_product()" placeholder="Search for products.." title="Type in a product name">
+            <select class="form-control" id="select-tag">
+                <option value="category">Category</option>
+                <option value="tag">Tags</option>
+            </select>
+          </div>
           <table id="product-table">
             <tr>
               <th>Product ID</th>
@@ -82,5 +89,28 @@
       <div class="footer"><h6>@2019 IS3106. All rights reserved.</h6></div>
     </div>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   .<script src="../js/products-data-generator.js" charset="utf-8"></script>
+  <script>
+function search_product() {
+  var select_tag = $('#select-tag').find(":selected").text()
+//   var input, filter, accordion, meeting_info_items, meeting_info_item, i;
+//   input = document.getElementById("search-bar");
+//   filter = input.value.toUpperCase();
+// accordion = document.getElementById("jQuery_accordion");
+// meeting_info_items = accordion.getElementsByClassName("meeting_info_items");
+// for (i = 0; i < meeting_info_items.length; i++) {
+//   if(select_tag.toUpperCase() == "NAME"){
+//     meeting_info_item = meeting_info_items[i].getElementsByClassName("meeting_info_item")[2];
+//   }else if (select_tag.toUpperCase() == "CODE") {
+//     meeting_info_item = meeting_info_items[i].getElementsByClassName("meeting_info_item")[1];
+//   }
+//     if (meeting_info_item.innerHTML.toUpperCase().indexOf(filter) > -1) {
+//         meeting_info_items[i].style.display = "";
+//     } else {
+//         meeting_info_items[i].style.display = "none";
+//     }
+// }
+}
+</script>
 </html>
