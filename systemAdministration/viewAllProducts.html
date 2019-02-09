@@ -8,51 +8,9 @@
   </head>
   <body>
     <div class="body">
-      <div class="header">
-        <h1>Point of Sale System (v5.0) :: View All Products</h1>
-        <div>
-          <form>
-            <label for="username">Username</label>
-            <input type="text" id="username">
-            <label for="password">Password</label>
-            <input type="text">
-            <input type="button" value="Clear">
-            <input type="button" value="Login">
-          </form>
-        </div>
-      </div>
+      <div class="header"></div>
       <div class="content">
-        <div class="left">
-          <h3>Main Menu</h3>
-          <br><br>
-          <a href="../index.html">Home</a>
-          <br><br>
-          <a href="">Logout</a>
-          <br><br>
-          <section>
-            <h4>Cashier Operation</h4>
-            <ul>
-              <li><a href="">Checkout</a></li>
-              <li><a href="">Void/Refund</a></li>
-              <li><a style="text-decoration-line: underline;" href="">View My Sale Transaction</a></li>
-            </ul>
-          </section>
-          <section>
-            <h4>System Administration</h4>
-            <h5>Staff</h5>
-            <ul>
-              <li><a href="./createNewStaff.html">Create New Staff</a></li>
-              <li><a href="./viewStaffDetails.html">View Staff Details</a></li>
-              <li><a href="./viewAllStaffs.html">View All Staffs</a></li>
-            </ul>
-            <h5>Product</h5>
-            <ul>
-              <li><a href="./createNewProduct.html">Create New Product</a></li>
-              <li><a href="./viewProductDetails.html">View Product Details</a></li>
-              <li><a href="./viewAllProducts.html">View All Products</a></li>
-            </ul>
-          </section>
-        </div>
+        <div class="left"></div>
         <div class="center">
           <h3>Product Catalogue</h3>
           <div class="search-menu">
@@ -76,17 +34,9 @@
             </tr>
           </table>
         </div>
-        <div class="right">
-          <h3>Advertisement</h3>
-          <img src="../images/300x300.png" alt="300">
-          <p>Advertisement 1</p>
-          <img src="../images/300x300.png" alt="300">
-          <p>Advertisement 2</p>
-          <img src="../images/300x300.png" alt="300">
-          <p>Advertisement 3</p>
-        </div>
+        <div class="right"></div>
       </div>
-      <div class="footer"><h6>@2019 IS3106. All rights reserved.</h6></div>
+      <div class="footer"></div>
     </div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -106,7 +56,7 @@
         //pass
         console.log("not implemented yet");
       }
-      
+
       for(var j = 0; j < filter.length; j ++){
         if (innerHTML.toUpperCase().indexOf(filter[j]) > -1){
           flag = true;
@@ -122,4 +72,5 @@
     }
   }
   </script>
+  <script src="../partial/template.js"></script>
 </html>

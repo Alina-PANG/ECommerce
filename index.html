@@ -8,19 +8,7 @@
   </head>
   <body>
     <div class="body">
-      <div class="header">
-        <h1>Point of Sale System (v5.0) :: Home</h1>
-        <div>
-          <form>
-            <label for="username">Username</label>
-            <input type="text" id="username">
-            <label for="password">Password</label>
-            <input type="text">
-            <input type="button" value="Clear">
-            <input type="button" value="Login">
-          </form>
-        </div>
-      </div>
+      <div class="header" id="header"></div>
       <div class="content">
         <div class="left">
           <h3>Main Menu</h3>
@@ -70,7 +58,12 @@
           <p>Advertisement 3</p>
         </div>
       </div>
-      <div class="footer"><h6>@2019 IS3106. All rights reserved.</h6></div>
+      <div class="footer" id="footer"></div>
     </div>
   </body>
+  <footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./partial/header.js"></script>
+    <script src="./partial/footer.js"></script>
+  </footer>
 </html>
