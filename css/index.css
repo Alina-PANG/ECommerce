@@ -80,3 +80,9 @@ overflow: scroll;
   padding: 5px;
  background-color: #efdcdc;
 }
+.search-menu input{
+  padding: 5px;
+margin: 5px;
+margin-bottom: 11px;
+
+}
