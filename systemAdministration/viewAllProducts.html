@@ -30,6 +30,7 @@
               <th>Quantity on Hand</th>
               <th>Reorder Quantity</th>
               <th>Unit Price</th>
+              <th>Tags</th>
               <th>Category</th>
             </tr>
           </table>
@@ -51,10 +52,9 @@
     for (i = 2; i < products_table.length; i++) {
       flag = false;
       if(select_tag.toUpperCase() == "CATEGORY"){
+        innerHTML = products_table[i].childNodes[9].innerHTML;
+      }else if (select_tag.toUpperCase() == "TAGS") {
         innerHTML = products_table[i].childNodes[8].innerHTML;
-      }else if (select_tag.toUpperCase() == "TAG") {
-        //pass
-        console.log("not implemented yet");
       }
 
       for(var j = 0; j < filter.length; j ++){

@@ -1,70 +1,103 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Create New Product</title>
-    <link rel="stylesheet" href="../css/default.css">
-    <link rel="stylesheet" href="../css/index.css">
-  </head>
-  <body>
-    <div class="body">
-      <div class="header"></div>
-      <div class="content">
-        <div class="left"></div>
-        <div class="center">
-          <h3>Create New Product</h3>
-          <table class="create-new-form">
-            <tr>
-              <th>SKU Code:</th>
-              <td><input type="text" placeholder="PROD999"></td>
-            </tr>
-            <tr>
-              <th>Name:</th>
-              <td><input type="text" placeholder="Product 1"></td>
-            </tr>
-            <tr>
-              <th>Description:</th>
-              <td><input type="text" placeholder="Product 1"></td>
-            </tr>
-            <tr>
-              <th>Quantity on Hand: </th>
-              <td><input type="text" placeholder="99"></td>
-            </tr>
-            <tr>
-              <th>Reorder Quantity: </th>
-              <td><input type="text" placeholder="99"></td>
-            </tr>
-            <tr>
-              <th>Unit Price: $</th>
-              <td><input type="text" placeholder="10.00"></td>
-            </tr>
-            <tr>
-              <th>Category:</th>
-              <td>
-                <select id ="category-select">
-                   <option value = "A">Category A</option>
-                   <option value = "B">Category B</option>
-                   <option value = "C">Category C</option>
-                </select>
-              </td>
-            </tr>
-            <tr>
-              <th>Rating: </th>
-              <td><input type="range" min="1" max="5"></td>
-            </tr>
-            <tr>
-              <th>Record Date:</th>
-              <td><input type="date"></td>
-            </tr>
-            <tr><td colspan="2"><input type="button" class="submit-btn" value="Create"></td></tr>
-          </table>
-        </div>
-        <div class="right"></div>
+<head>
+  <meta charset="utf-8">
+  <title>Create New Product</title>
+  <link rel="stylesheet" href="../css/default.css">
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <div class="body">
+    <div class="header"></div>
+    <div class="content">
+      <div class="left"></div>
+      <div class="center">
+        <h3>Create New Product</h3>
+        <table class="create-new-form">
+          <tr>
+            <th>SKU Code:</th>
+            <td><input type="text" placeholder="PROD999"></td>
+          </tr>
+          <tr>
+            <th>Name:</th>
+            <td><input type="text" placeholder="Product 1"></td>
+          </tr>
+          <tr>
+            <th>Tags: </th>
+            <td>
+              <div>
+                <button id="select-tags">Select tags...</button>
+                <div class="multiSelect">
+                  <ul>
+                    <li><input type="checkbox" value="Tag_A" />&nbsp;&nbsp;Electronics</li>
+                    <li><input type="checkbox" value="Tag_B" />&nbsp;&nbsp;Books</li>
+                    <li><input type="checkbox" value="Tag_C" />&nbsp;&nbsp;Clothes</li>
+                    <li><input type="checkbox" value="Tag_D" />&nbsp;&nbsp;Furnature</li>
+                    <li><input type="checkbox" value="Tag_E" />&nbsp;&nbsp;Pets</li>
+                    <li><input type="checkbox" value="Tag_F" />&nbsp;&nbsp;Child</li>
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>Description:</th>
+            <td><input type="text" placeholder="Product 1"></td>
+          </tr>
+          <tr>
+            <th>Quantity on Hand: </th>
+            <td><input type="text" placeholder="99"></td>
+          </tr>
+          <tr>
+            <th>Reorder Quantity: </th>
+            <td><input type="text" placeholder="99"></td>
+          </tr>
+          <tr>
+            <th>Unit Price: $</th>
+            <td><input type="text" placeholder="10.00"></td>
+          </tr>
+          <tr>
+            <th>Category:</th>
+            <td>
+              <select id ="category-select">
+                <option value = "A">Category A</option>
+                <option value = "B">Category B</option>
+                <option value = "C">Category C</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>Rating: </th>
+            <td><input type="range" min="1" max="5"></td>
+          </tr>
+          <tr>
+            <th>Record Date:</th>
+            <td><input type="date"></td>
+          </tr>
+          <tr><td colspan="2"><input type="button" class="submit-btn" value="Create"></td></tr>
+        </table>
       </div>
-      <div class="footer"></div>
+      <div class="right"></div>
     </div>
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="../js/data-generator.js" charset="utf-8"></script>
-  <script src="../partial/template.js"></script>
+    <div class="footer"></div>
+  </div>
+</body>
+<script>
+var expanded = false;
+
+function showCheckboxes() {
+  var checkboxes = document.getElementById("checkboxes");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../js/data-generator.js" charset="utf-8"></script>
+<script src="../js/btn-click.js" charset="utf-8"></script>
+<script src="../partial/template.js"></script>
 </html>

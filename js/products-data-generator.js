@@ -1,10 +1,11 @@
 
 
 function tableGenerateViewAllProducts() {
+  var tags = ["Electronics", "Books", "Clothes", "Furnature", "Pets", "Child"];
   var table = document.getElementById('product-table');
   for (var i = 0; i < 9; i ++) {
     var tr = document.createElement('tr');
-    for(var j = 0; j < 9; j ++) {
+    for(var j = 0; j < 10; j ++) {
       var td = document.createElement('td');
       switch(j) {
         case 0:
@@ -15,7 +16,7 @@ function tableGenerateViewAllProducts() {
         break;
         case 2:
         case 3:
-        case 8:
+        case 9:
           var ch;
           switch((i)/3){
             case 0:
@@ -45,7 +46,15 @@ function tableGenerateViewAllProducts() {
           break;
         case 7: // Unit Price
           td.innerHTML = "$10.00"
-        break;
+          break;
+        case 8:
+          string_tag = ""
+          for(t = 0; t < 2; t ++){
+            string_tag += tags[Math.floor(Math.random()*tags.length)];
+            if(t!= 1){string_tag += ", ";}
+          }
+          td.innerHTML = string_tag;
+          break;
       }
       tr.appendChild(td);
     }
